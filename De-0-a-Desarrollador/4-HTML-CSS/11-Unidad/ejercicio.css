@@ -1,0 +1,19 @@
+.col-xs {
+    background-color: aqua;
+}
+
+.col-sm-2 {
+    background-color: chartreuse;
+}
+
+.col-md-3 {
+    background-color: pink;
+}
+
+.col-lg-4 {
+    background-color: yellow;
+}
+
+.col-xl-6 {
+    background-color: coral;
+}
