@@ -1,5 +1,8 @@
-# OpenBootCamp
-Ejercicios relacionados con el OpenBootCamp
+# Open BootCamp
+
+Resolución de los ejercicios relacionados con el Open BootCamp
 
 
-Web para aaceder a l OpenBootCamp ()https://open-bootcamp.com/?campanya=1&grupo=twitter&palabraClave=mouredev&source=twitter&medium=referer&campaign=twitter)
+ Acceso al BootCamp (https://open-bootcamp.com/)
+ 
+ Acceso al GitHub del Open BootCamp (https://github.com/Open-Bootcamp)
