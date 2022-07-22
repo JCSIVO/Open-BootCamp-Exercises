@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Ejercicio456Application",
+            "request": "launch",
+            "mainClass": "com.exampleEjer789.Ejercicio789V2.Ejercicio456Application",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio456Application",
+            "request": "launch",
+            "mainClass": "com.ejercicio456.Ejercicio456Application",
+            "projectName": "Ejercicio456"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Ejercicio456Application<Ejercicio456>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ejercicio456.Ejercicio456.Ejercicio456Application",
+            "projectName": "Ejercicio456",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
