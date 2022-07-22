@@ -1,6 +1,6 @@
 # Open BootCamp
 
-Curso FullStack de 0 a Dev
+# Curso FullStack de 0 a Dev
 
 1.Conceptos de la Programación
 
@@ -22,6 +22,6 @@ Curso FullStack de 0 a Dev
 Resolución de los ejercicios relacionados con el Open BootCamp
 
 
- Acceso al BootCamp (https://open-bootcamp.com/)
+ # Acceso al BootCamp (https://open-bootcamp.com/)
  
- Acceso al GitHub del Open BootCamp (https://github.com/Open-Bootcamp)
+ # Acceso al GitHub del Open BootCamp (https://github.com/Open-Bootcamp)
