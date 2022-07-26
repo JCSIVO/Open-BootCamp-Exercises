@@ -1,0 +1,17 @@
+{
+  "name": "hola-mundo",
+  "version": "1.0.0",
+  "description": "Hola, este es mi primer ejercicio con Node en el mejor Bootcamp de programacion del mundo ",
+  "main": "index.js",
+  "scripts": {
+    "saludo":"Hola, este es mi primer ejercicio con Node en el mejor Bootcamp de programacion del mundo ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "holamundo",
+    "first",
+    "project"
+  ],
+  "author": "Jose Conejero",
+  "license": "ISC"
+}
