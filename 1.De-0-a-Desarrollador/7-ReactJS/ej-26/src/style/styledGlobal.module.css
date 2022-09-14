@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+    body {
+        font-size: calc(10px + 2vmin);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color:#ffff
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        background: #282c34;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    .headerTodo{
+        display:flex;
+        padding:10px;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(167, 166, 166);
+        margin-bottom: 15px;
+        width: 45%;
+        border-radius: 10px;
+    }
+    
+    .ul{
+        width: 47%;
+    }
+    .title {
+        color: #ffffff;
+        margin: 20px;
+    }
+    .todo {
+        list-style: none;
+        background: #11225575;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .todoText {
+        width: 70%;
+    }
+    .todoTitle{
+    color: #ffa500;
+    font-weight: bold 
+    }
+    .todoDescription{
+    color: #ffffff;
+    font-weight: bold 
+    }
+    .textSwitchCompleted{
+        color: #63ff08;
+    }
+    .textSwitchNotCompleted{
+        color: #ffffff;
+    }
