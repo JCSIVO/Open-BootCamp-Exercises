@@ -1,0 +1,6 @@
+test {
+    useJUnitPlatform(
+        inludeTags "desarrollo",
+        excludeTags "produccion"
+    )
+}
