@@ -1,0 +1,14 @@
+[ignore]
+.*/node_modules/.*
+.*/src/index\.js
+
+[includes]
+
+[libs]
+
+[lints]
+
+[options]
+all=true
+
+[strict]
