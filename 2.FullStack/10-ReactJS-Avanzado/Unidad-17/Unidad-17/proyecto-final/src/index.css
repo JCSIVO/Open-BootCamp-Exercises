@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply py-1 px-2 shadow rounded bg-sky-300 hover:bg-sky-400 
+        hover:text-white transition dark:bg-sky-600 dark:hover:border-y-sky-800
+    }
+}
