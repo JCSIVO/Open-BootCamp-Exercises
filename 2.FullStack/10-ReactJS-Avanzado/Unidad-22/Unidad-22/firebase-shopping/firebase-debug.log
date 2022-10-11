@@ -1,0 +1,83 @@
+[debug] [2021-12-27T10:37:49.325Z] ----------------------------------------------------------------------
+[debug] [2021-12-27T10:37:49.328Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-12-27T10:37:49.329Z] CLI Version:   10.0.1
+[debug] [2021-12-27T10:37:49.329Z] Platform:      win32
+[debug] [2021-12-27T10:37:49.329Z] Node Version:  v12.22.3
+[debug] [2021-12-27T10:37:49.331Z] Time:          Mon Dec 27 2021 11:37:49 GMT+0100 (GMT+01:00)
+[debug] [2021-12-27T10:37:49.331Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-12-27T10:37:49.336Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-12-27T10:37:49.389Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-12-27T10:37:49.389Z] > authorizing via signed-in user (gorkavillara@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Gorka\Desktop\OpenBootcamp\React-JS-Avanzado\firebase-shopping
+
+[debug] [2021-12-27T10:37:49.862Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-12-27T10:37:49.862Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-12-27T10:38:16.835Z] > refreshing access token with scopes: []
+[debug] [2021-12-27T10:38:16.836Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-27T10:38:16.976Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Mon, 27 Dec 2021 10:38:17 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-27T10:38:17.007Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-12-27T10:38:17.423Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-12-27T10:38:17.423Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project fir-shopping-d850e (firebase-shopping) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-12-27T10:39:43.122Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-12-27T10:39:43.222Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-12-27T10:39:43.222Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.6.1","browserURL":"https://www.gstatic.com/firebasejs/9.6.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.6.1/firebase.tgz"},"live":{"version":"9.6","browserURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.6.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.6.1/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.6.1/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.6.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.6.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.6.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.6.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.6.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.memory.js"}}
+[info] +  Wrote build/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Users\Gorka\Desktop\OpenBootcamp\React-JS-Avanzado 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=169155538&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-12-27T10:39:44.329Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"3cb6d86d255e8a8247c3","redirect_uri":"http://localhost:9005","state":"169155538"}
+[debug] [2021-12-27T10:39:44.675Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Mon, 27 Dec 2021 10:39:44 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, X-PJAX-Container, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"9e409176c533e8d9658976099c0e3f46\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events translator.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src render.githubusercontent.com viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/","x-github-request-id":"CF1C:57AD:4E64E03:5404FC1:61C997F0"}
+[debug] [2021-12-27T10:39:44.682Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-12-27T10:39:44.997Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-12-27T10:39:44.997Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"gorkavillara","id":38912624,"node_id":"MDQ6VXNlcjM4OTEyNjI0","avatar_url":"https://avatars.githubusercontent.com/u/38912624?v=4","gravatar_id":"","url":"https://api.github.com/users/gorkavillara","html_url":"https://github.com/gorkavillara","followers_url":"https://api.github.com/users/gorkavillara/followers","following_url":"https://api.github.com/users/gorkavillara/following{/other_user}","gists_url":"https://api.github.com/users/gorkavillara/gists{/gist_id}","starred_url":"https://api.github.com/users/gorkavillara/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/gorkavillara/subscriptions","organizations_url":"https://api.github.com/users/gorkavillara/orgs","repos_url":"https://api.github.com/users/gorkavillara/repos","events_url":"https://api.github.com/users/gorkavillara/events{/privacy}","received_events_url":"https://api.github.com/users/gorkavillara/received_events","type":"User","site_admin":false,"name":"Gorka Villar","company":null,"blog":"https://gorkavillar.com","location":null,"email":null,"hireable":null,"bio":"Spanish engineer and developer","twitter_username":null,"public_repos":16,"public_gists":0,"followers":0,"following":0,"created_at":"2018-05-02T11:54:33Z","updated_at":"2021-11-13T11:43:23Z","private_gists":0,"total_private_repos":6,"owned_private_repos":6,"disk_usage":50758,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as gorkavillara 
+[info] 
+[debug] [2021-12-27T10:40:23.801Z] >>> [apiv2][query] GET https://api.github.com/repos/Open-Bootcamp/actions/secrets/public-key type=owner
+[debug] [2021-12-27T10:40:23.803Z] >>> [apiv2][query] GET https://api.github.com/repos///actions/secrets/public-key type=owner
+[debug] [2021-12-27T10:40:24.060Z] <<< [apiv2][status] GET https://api.github.com/repos///actions/secrets/public-key 404
+[debug] [2021-12-27T10:40:24.061Z] <<< [apiv2][body] GET https://api.github.com/repos///actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2021-12-27T10:40:24.067Z] <<< [apiv2][status] GET https://api.github.com/repos/Open-Bootcamp/actions/secrets/public-key 404
+[debug] [2021-12-27T10:40:24.067Z] <<< [apiv2][body] GET https://api.github.com/repos/Open-Bootcamp/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2021-12-27T10:40:43.347Z] >>> [apiv2][query] GET https://api.github.com/repos/Open-Bootcamp/React-JS-Avanzado/actions/secrets/public-key type=owner
+[debug] [2021-12-27T10:40:43.637Z] <<< [apiv2][status] GET https://api.github.com/repos/Open-Bootcamp/React-JS-Avanzado/actions/secrets/public-key 403
+[debug] [2021-12-27T10:40:43.637Z] <<< [apiv2][body] GET https://api.github.com/repos/Open-Bootcamp/React-JS-Avanzado/actions/secrets/public-key {"message":"Must have admin rights to Repository.","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
