@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    align-items: center;
+    background-color: rgba(158, 255, 242);
+    min-width: 20px;
+    min-height: 20px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+}
+.container.header {
+    border-radius: 0px;
+    background-color: #eee;
+    margin: 0px;
+}

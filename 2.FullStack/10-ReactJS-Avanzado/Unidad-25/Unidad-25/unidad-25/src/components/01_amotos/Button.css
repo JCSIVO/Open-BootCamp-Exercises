@@ -1,0 +1,19 @@
+.btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14pt;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+}
+
+.btn.red {
+    background-color: red;
+    color: white;
+}
+
+.btn.blue {
+    background-color: blue;
+    color: white;
+}
