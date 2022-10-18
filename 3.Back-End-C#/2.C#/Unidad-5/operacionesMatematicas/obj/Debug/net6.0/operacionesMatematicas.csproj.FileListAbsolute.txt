@@ -1,0 +1,15 @@
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-5/operacionesMatematicas/bin/Debug/net6.0/operacionesMatematicas
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-5/operacionesMatematicas/bin/Debug/net6.0/operacionesMatematicas.deps.json
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-5/operacionesMatematicas/bin/Debug/net6.0/operacionesMatematicas.runtimeconfig.json
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-5/operacionesMatematicas/bin/Debug/net6.0/operacionesMatematicas.dll
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-5/operacionesMatematicas/bin/Debug/net6.0/operacionesMatematicas.pdb
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-5/operacionesMatematicas/obj/Debug/net6.0/operacionesMatematicas.csproj.AssemblyReference.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-5/operacionesMatematicas/obj/Debug/net6.0/operacionesMatematicas.GeneratedMSBuildEditorConfig.editorconfig
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-5/operacionesMatematicas/obj/Debug/net6.0/operacionesMatematicas.AssemblyInfoInputs.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-5/operacionesMatematicas/obj/Debug/net6.0/operacionesMatematicas.AssemblyInfo.cs
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-5/operacionesMatematicas/obj/Debug/net6.0/operacionesMatematicas.csproj.CoreCompileInputs.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-5/operacionesMatematicas/obj/Debug/net6.0/operacionesMatematicas.dll
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-5/operacionesMatematicas/obj/Debug/net6.0/refint/operacionesMatematicas.dll
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-5/operacionesMatematicas/obj/Debug/net6.0/operacionesMatematicas.pdb
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-5/operacionesMatematicas/obj/Debug/net6.0/operacionesMatematicas.genruntimeconfig.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-5/operacionesMatematicas/obj/Debug/net6.0/ref/operacionesMatematicas.dll
