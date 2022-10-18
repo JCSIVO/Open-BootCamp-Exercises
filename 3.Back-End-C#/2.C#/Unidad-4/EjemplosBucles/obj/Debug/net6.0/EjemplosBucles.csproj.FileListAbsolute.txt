@@ -1,0 +1,15 @@
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-4/EjemplosBucles/bin/Debug/net6.0/EjemplosBucles
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-4/EjemplosBucles/bin/Debug/net6.0/EjemplosBucles.deps.json
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-4/EjemplosBucles/bin/Debug/net6.0/EjemplosBucles.runtimeconfig.json
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-4/EjemplosBucles/bin/Debug/net6.0/EjemplosBucles.dll
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-4/EjemplosBucles/bin/Debug/net6.0/EjemplosBucles.pdb
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-4/EjemplosBucles/obj/Debug/net6.0/EjemplosBucles.csproj.AssemblyReference.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-4/EjemplosBucles/obj/Debug/net6.0/EjemplosBucles.GeneratedMSBuildEditorConfig.editorconfig
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-4/EjemplosBucles/obj/Debug/net6.0/EjemplosBucles.AssemblyInfoInputs.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-4/EjemplosBucles/obj/Debug/net6.0/EjemplosBucles.AssemblyInfo.cs
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-4/EjemplosBucles/obj/Debug/net6.0/EjemplosBucles.csproj.CoreCompileInputs.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-4/EjemplosBucles/obj/Debug/net6.0/EjemplosBucles.dll
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-4/EjemplosBucles/obj/Debug/net6.0/refint/EjemplosBucles.dll
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-4/EjemplosBucles/obj/Debug/net6.0/EjemplosBucles.pdb
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-4/EjemplosBucles/obj/Debug/net6.0/EjemplosBucles.genruntimeconfig.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-4/EjemplosBucles/obj/Debug/net6.0/ref/EjemplosBucles.dll
