@@ -1,0 +1,15 @@
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-7/Metodos/bin/Debug/net6.0/Metodos
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-7/Metodos/bin/Debug/net6.0/Metodos.deps.json
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-7/Metodos/bin/Debug/net6.0/Metodos.runtimeconfig.json
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-7/Metodos/bin/Debug/net6.0/Metodos.dll
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-7/Metodos/bin/Debug/net6.0/Metodos.pdb
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-7/Metodos/obj/Debug/net6.0/Metodos.csproj.AssemblyReference.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-7/Metodos/obj/Debug/net6.0/Metodos.GeneratedMSBuildEditorConfig.editorconfig
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-7/Metodos/obj/Debug/net6.0/Metodos.AssemblyInfoInputs.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-7/Metodos/obj/Debug/net6.0/Metodos.AssemblyInfo.cs
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-7/Metodos/obj/Debug/net6.0/Metodos.csproj.CoreCompileInputs.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-7/Metodos/obj/Debug/net6.0/Metodos.dll
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-7/Metodos/obj/Debug/net6.0/refint/Metodos.dll
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-7/Metodos/obj/Debug/net6.0/Metodos.pdb
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-7/Metodos/obj/Debug/net6.0/Metodos.genruntimeconfig.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-7/Metodos/obj/Debug/net6.0/ref/Metodos.dll
