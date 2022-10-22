@@ -107,16 +107,21 @@ public class Elemento
 */
 
 // Clase de Collección Personalizada
+var colors = new MisColores();
+foreach (Color theColor in colors)
+{
+    Console.WriteLine($"Color: { theColor.Nombre }, HEX: { theColor.CodigoHex }, Opacidad { theColor.Opacidad }");
+}
 
 public class MisColores : System.Collections.IEnumerable
 {
-    Colores[] _colores =
+    private Color[] _colores =
     {
-        new Colores() { Nombre = "rojo" , CodigoHex = 000000}, 
-        new Colores() { Nombre = "azul" }, 
-        new Colores() { Nombre = "verde" }
+        new Color() { Nombre = "rojo" , CodigoHex = "CB3234", Opacidad = 0.55f}, 
+        new Color() { Nombre = "azul", CodigoHex = "0000FF" }, 
+        new Color() { Nombre = "verde", CodigoHex = "008F39" }
     };
-    public System.Collections.IEnumerable GetEnumerator()
+    public System.Collections.IEnumerator GetEnumerator()
     
     {
         return new ColoresEnumerator(_colores);
@@ -124,24 +129,24 @@ public class MisColores : System.Collections.IEnumerable
     }
     private class ColoresEnumerator : System.Collections.IEnumerator
     {
-        private Colores[] _colors;
+        private Color[] _colores;
         private int _position = -1;
 
-        public ColoresEnumerator(Colores[] colors)
+        public ColoresEnumerator(Color[] colores)
         {
-            _colors = colors;
+            _colores = colores;
         }
         object System.Collections.IEnumerator.Current
         {
             get 
             {
-                return _colors[_position];
+                return _colores[_position];
             }
         }
         bool System.Collections.IEnumerator.MoveNext()
         {
             _position++;
-            return (_position < _colors.Length);
+            return (_position < _colores.Length);
         }
         void System.Collections.IEnumerator.Reset()
         {
@@ -153,8 +158,9 @@ public class MisColores : System.Collections.IEnumerable
 
 }
 
-public class Colores
+public class Color
 {
     public string Nombre { get; set; }
-    public int CodigoHex { get; set; }
+    public string CodigoHex { get; set; }
+    public float Opacidad { get; set; }
 }
