@@ -1,0 +1,15 @@
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-13/bin/Debug/net6.0/Unidad-13
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-13/bin/Debug/net6.0/Unidad-13.deps.json
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-13/bin/Debug/net6.0/Unidad-13.runtimeconfig.json
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-13/bin/Debug/net6.0/Unidad-13.dll
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-13/bin/Debug/net6.0/Unidad-13.pdb
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-13/obj/Debug/net6.0/Unidad-13.csproj.AssemblyReference.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-13/obj/Debug/net6.0/Unidad-13.GeneratedMSBuildEditorConfig.editorconfig
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-13/obj/Debug/net6.0/Unidad-13.AssemblyInfoInputs.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-13/obj/Debug/net6.0/Unidad-13.AssemblyInfo.cs
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-13/obj/Debug/net6.0/Unidad-13.csproj.CoreCompileInputs.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-13/obj/Debug/net6.0/Unidad-13.dll
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-13/obj/Debug/net6.0/refint/Unidad-13.dll
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-13/obj/Debug/net6.0/Unidad-13.pdb
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-13/obj/Debug/net6.0/Unidad-13.genruntimeconfig.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-13/obj/Debug/net6.0/ref/Unidad-13.dll
