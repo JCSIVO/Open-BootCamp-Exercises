@@ -1,0 +1,15 @@
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-16/EjemploJSON/bin/Debug/net6.0/EjemploJSON
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-16/EjemploJSON/bin/Debug/net6.0/EjemploJSON.deps.json
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-16/EjemploJSON/bin/Debug/net6.0/EjemploJSON.runtimeconfig.json
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-16/EjemploJSON/bin/Debug/net6.0/EjemploJSON.dll
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-16/EjemploJSON/bin/Debug/net6.0/EjemploJSON.pdb
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-16/EjemploJSON/obj/Debug/net6.0/EjemploJSON.csproj.AssemblyReference.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-16/EjemploJSON/obj/Debug/net6.0/EjemploJSON.GeneratedMSBuildEditorConfig.editorconfig
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-16/EjemploJSON/obj/Debug/net6.0/EjemploJSON.AssemblyInfoInputs.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-16/EjemploJSON/obj/Debug/net6.0/EjemploJSON.AssemblyInfo.cs
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-16/EjemploJSON/obj/Debug/net6.0/EjemploJSON.csproj.CoreCompileInputs.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-16/EjemploJSON/obj/Debug/net6.0/EjemploJSON.dll
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-16/EjemploJSON/obj/Debug/net6.0/refint/EjemploJSON.dll
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-16/EjemploJSON/obj/Debug/net6.0/EjemploJSON.pdb
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-16/EjemploJSON/obj/Debug/net6.0/EjemploJSON.genruntimeconfig.cache
+/Users/joseconejerosivo/OpenBootCamp/11.C#/Unidad-16/EjemploJSON/obj/Debug/net6.0/ref/EjemploJSON.dll
