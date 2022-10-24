@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Unidad-19/1.0.0": {
+        "runtime": {
+          "Unidad-19.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Unidad-19/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
