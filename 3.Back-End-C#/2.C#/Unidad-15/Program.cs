@@ -68,13 +68,14 @@ task2.Start();
 task3.Start();
 
 // Recibir las tareas de forma individual
+/*
 await task1;
 await task2;
 await task3;
-
+*/
 
 // Recibir las tareas de forma colectiva
-//Task.WhenAll(task1, task2, task3); // Recibimos todas las tareas iniciadas cuando se completan
+// await Task.WhenAll(task1, task2, task3); // Recibimos todas las tareas iniciadas cuando se completan
 crono.Stop();
 Console.WriteLine($"Todo el programa ha durado: { crono.Elapsed } segundos");
 
