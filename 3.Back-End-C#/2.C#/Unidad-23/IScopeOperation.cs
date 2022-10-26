@@ -1,0 +1,7 @@
+
+
+
+public interface IScopeOperation : IOperation
+{
+
+}
