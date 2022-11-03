@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "qnNxRsNlX8YUCk7k2wfvm33T5pMu2qUzv7pAJaZGXz86LIjRLstsbLm9WN4Lt94bFOj3xDE+MvFmFxoz54HVjg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jose\\Desktop\\campus-open-bootcamp\\3.Back-End\\1.Back-End C#\\4.APIs con .NET\\9.Control de versiones de una API Restful\\APIVersionControl\\Ejercicio\\APIVC\\APIVC\\APIVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jose\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
+    "C:\\Users\\Jose\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning.apiexplorer\\5.0.0\\microsoft.aspnetcore.mvc.versioning.apiexplorer.5.0.0.nupkg.sha512",
+    "C:\\Users\\Jose\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Jose\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Jose\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\Jose\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\Jose\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\Jose\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
