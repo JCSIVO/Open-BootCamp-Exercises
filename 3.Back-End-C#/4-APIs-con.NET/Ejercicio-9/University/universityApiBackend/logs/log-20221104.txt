@@ -1,0 +1,829 @@
+2022-11-04 07:42:27.506 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 07:42:27.591 +01:00 [INF] warn: 04/11/2022 07:42:27.588 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 07:42:27.923 +01:00 [INF] info: 04/11/2022 07:42:27.923 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 07:42:28.629 +01:00 [ERR] An error occurred using the connection to database 'UniversityDB' on server 'localhost\SQLEXPRESS'.
+2022-11-04 07:42:28.638 +01:00 [INF] fail: 04/11/2022 07:42:28.638 RelationalEventId.ConnectionError[20004] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      An error occurred using the connection to database 'UniversityDB' on server 'localhost\SQLEXPRESS'.
+2022-11-04 07:42:28.655 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'universityApiBackend.DataAccess.UniversityDBContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - La cadena de certificación fue emitida por una entidad en la que no se confía.)
+ ---> System.ComponentModel.Win32Exception (0x80090325): La cadena de certificación fue emitida por una entidad en la que no se confía.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.SNIWritePacket(PacketHandle packet, UInt32& sniError, Boolean canAccumulate, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WriteSni(Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WritePacket(Byte flushMode, Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParser.TdsLogin(SqlLogin rec, FeatureExtension requestedFeatures, SessionData recoverySessionData, FederatedAuthenticationFeatureExtensionData fedAuthFeatureExtensionData, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:b2d5e1e4-ea21-4c00-bf20-ff2e965796a0
+Error Number:-2146893019,State:0,Class:20
+Microsoft.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - La cadena de certificación fue emitida por una entidad en la que no se confía.)
+ ---> System.ComponentModel.Win32Exception (0x80090325): La cadena de certificación fue emitida por una entidad en la que no se confía.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.SNIWritePacket(PacketHandle packet, UInt32& sniError, Boolean canAccumulate, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WriteSni(Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WritePacket(Byte flushMode, Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParser.TdsLogin(SqlLogin rec, FeatureExtension requestedFeatures, SessionData recoverySessionData, FederatedAuthenticationFeatureExtensionData fedAuthFeatureExtensionData, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:b2d5e1e4-ea21-4c00-bf20-ff2e965796a0
+Error Number:-2146893019,State:0,Class:20
+2022-11-04 07:42:28.690 +01:00 [INF] fail: 04/11/2022 07:42:28.690 CoreEventId.QueryIterationFailed[10100] (Microsoft.EntityFrameworkCore.Query) 
+      An exception occurred while iterating over the results of a query for context type 'universityApiBackend.DataAccess.UniversityDBContext'.
+      Microsoft.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - La cadena de certificación fue emitida por una entidad en la que no se confía.)
+       ---> System.ComponentModel.Win32Exception (0x80090325): La cadena de certificación fue emitida por una entidad en la que no se confía.
+         at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+         at Microsoft.Data.SqlClient.TdsParserStateObject.SNIWritePacket(PacketHandle packet, UInt32& sniError, Boolean canAccumulate, Boolean callerHasConnectionLock, Boolean asyncClose)
+         at Microsoft.Data.SqlClient.TdsParserStateObject.WriteSni(Boolean canAccumulate)
+         at Microsoft.Data.SqlClient.TdsParserStateObject.WritePacket(Byte flushMode, Boolean canAccumulate)
+         at Microsoft.Data.SqlClient.TdsParser.TdsLogin(SqlLogin rec, FeatureExtension requestedFeatures, SessionData recoverySessionData, FederatedAuthenticationFeatureExtensionData fedAuthFeatureExtensionData, SqlConnectionEncryptOption encrypt)
+         at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+         at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+         at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+         at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+         at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+         at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+         at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+         at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+         at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+         at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+         at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+         at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+         at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+         at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+         at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+      ClientConnectionId:b2d5e1e4-ea21-4c00-bf20-ff2e965796a0
+      Error Number:-2146893019,State:0,Class:20
+2022-11-04 08:12:57.742 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 08:12:57.818 +01:00 [INF] warn: 04/11/2022 08:12:57.815 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 08:12:58.177 +01:00 [INF] info: 04/11/2022 08:12:58.177 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 08:12:58.932 +01:00 [INF] info: 04/11/2022 08:12:58.932 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (71ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 08:12:58.975 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2797.7861 ms
+2022-11-04 08:13:50.748 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 08:13:50.826 +01:00 [INF] warn: 04/11/2022 08:13:50.823 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 08:13:51.144 +01:00 [INF] info: 04/11/2022 08:13:51.144 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 08:13:51.857 +01:00 [INF] info: 04/11/2022 08:13:51.857 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (60ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 08:13:51.894 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2398.5113 ms
+2022-11-04 08:14:28.435 +01:00 [INF] info: 04/11/2022 08:14:28.435 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 08:14:28.446 +01:00 [INF] info: 04/11/2022 08:14:28.446 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[@__userLogin_UserName_0='Administrator' (Size = 50), @__userLogin_Password_1='Administrator' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 08:14:28.450 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 43.3531 ms
+2022-11-04 08:14:55.375 +01:00 [INF] info: 04/11/2022 08:14:55.375 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 08:14:55.381 +01:00 [INF] info: 04/11/2022 08:14:55.381 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__userLogin_UserName_0='Administrator' (Size = 50), @__userLogin_Password_1='Administrator' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 08:14:55.385 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 67.2010 ms
+2022-11-04 08:15:03.569 +01:00 [INF] info: 04/11/2022 08:15:03.569 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 08:15:03.575 +01:00 [INF] info: 04/11/2022 08:15:03.575 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__userLogin_UserName_0='Administrator' (Size = 50), @__userLogin_Password_1='Administrator' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 08:15:03.580 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 12.0491 ms
+2022-11-04 08:15:04.314 +01:00 [INF] info: 04/11/2022 08:15:04.314 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 08:15:04.320 +01:00 [INF] info: 04/11/2022 08:15:04.320 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogin_UserName_0='Administrator' (Size = 50), @__userLogin_Password_1='Administrator' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 08:15:04.329 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 15.5459 ms
+2022-11-04 08:15:04.834 +01:00 [INF] info: 04/11/2022 08:15:04.834 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 08:15:04.839 +01:00 [INF] info: 04/11/2022 08:15:04.839 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogin_UserName_0='Administrator' (Size = 50), @__userLogin_Password_1='Administrator' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 08:15:04.844 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 21.8799 ms
+2022-11-04 08:15:05.010 +01:00 [INF] info: 04/11/2022 08:15:05.009 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 08:15:05.016 +01:00 [INF] info: 04/11/2022 08:15:05.016 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogin_UserName_0='Administrator' (Size = 50), @__userLogin_Password_1='Administrator' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 08:15:05.021 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 12.9933 ms
+2022-11-04 08:15:05.183 +01:00 [INF] info: 04/11/2022 08:15:05.183 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 08:15:05.189 +01:00 [INF] info: 04/11/2022 08:15:05.189 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__userLogin_UserName_0='Administrator' (Size = 50), @__userLogin_Password_1='Administrator' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 08:15:05.195 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 13.2984 ms
+2022-11-04 08:15:05.353 +01:00 [INF] info: 04/11/2022 08:15:05.353 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 08:15:05.360 +01:00 [INF] info: 04/11/2022 08:15:05.360 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__userLogin_UserName_0='Administrator' (Size = 50), @__userLogin_Password_1='Administrator' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 08:15:05.366 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 13.6516 ms
+2022-11-04 08:16:45.127 +01:00 [INF] info: 04/11/2022 08:16:45.127 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 08:16:45.133 +01:00 [INF] info: 04/11/2022 08:16:45.133 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 08:16:45.136 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 46.7289 ms
+2022-11-04 08:19:36.843 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 08:19:36.936 +01:00 [INF] warn: 04/11/2022 08:19:36.932 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 08:19:37.259 +01:00 [INF] info: 04/11/2022 08:19:37.259 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 08:19:37.986 +01:00 [INF] info: 04/11/2022 08:19:37.986 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (56ms) [Parameters=[@__userLogin_UserName_0='Admin' (Size = 50), @__userLogin_Password_1='Admin' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 08:19:38.027 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2453.4553 ms
+2022-11-04 09:09:42.162 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 09:09:42.243 +01:00 [INF] warn: 04/11/2022 09:09:42.239 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 09:09:42.577 +01:00 [INF] info: 04/11/2022 09:09:42.577 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 09:09:43.274 +01:00 [INF] info: 04/11/2022 09:09:43.274 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (47ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 09:09:43.307 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2444.6345 ms
+2022-11-04 09:09:58.193 +01:00 [VRB] WeatherForecastController - Get - Trace Level Log
+2022-11-04 09:09:58.197 +01:00 [DBG] WeatherForecastController - Get - Debug Level Log
+2022-11-04 09:09:58.201 +01:00 [INF] WeatherForecastController - Get - Information Level Log
+2022-11-04 09:09:58.204 +01:00 [WRN] WeatherForecastController - Get - Warning Level Log
+2022-11-04 09:09:58.208 +01:00 [ERR] WeatherForecastController - Get - Error Level Log
+2022-11-04 09:09:58.211 +01:00 [FTL] WeatherForecastController - Get - Critical Level Log
+2022-11-04 09:09:58.226 +01:00 [INF] HTTP GET /WeatherForecast responded 200 in 35.2653 ms
+2022-11-04 09:22:16.070 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 09:22:16.158 +01:00 [INF] warn: 04/11/2022 09:22:16.155 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 09:22:16.465 +01:00 [INF] info: 04/11/2022 09:22:16.465 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 09:22:17.190 +01:00 [INF] info: 04/11/2022 09:22:17.190 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (50ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 09:22:17.223 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2427.9740 ms
+2022-11-04 09:26:17.512 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 09:26:17.587 +01:00 [INF] warn: 04/11/2022 09:26:17.583 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 09:26:17.915 +01:00 [INF] info: 04/11/2022 09:26:17.915 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 09:26:18.626 +01:00 [INF] info: 04/11/2022 09:26:18.626 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (46ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 09:26:18.658 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2405.1770 ms
+2022-11-04 09:26:36.411 +01:00 [INF] info: 04/11/2022 09:26:36.411 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 09:26:36.419 +01:00 [INF] info: 04/11/2022 09:26:36.419 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__userLogin_UserName_0='Admin' (Size = 50), @__userLogin_Password_1='Admin' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 09:26:36.423 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 25.1193 ms
+2022-11-04 09:26:52.800 +01:00 [INF] info: 04/11/2022 09:26:52.800 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 09:26:52.807 +01:00 [INF] info: 04/11/2022 09:26:52.807 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[@__userLogin_UserName_0='Admin' (Size = 50), @__userLogin_Password_1='Admin' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 09:26:52.811 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 68.1808 ms
+2022-11-04 10:23:56.483 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 10:23:56.565 +01:00 [INF] warn: 04/11/2022 10:23:56.561 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 10:23:56.895 +01:00 [INF] info: 04/11/2022 10:23:56.895 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 10:23:57.589 +01:00 [INF] info: 04/11/2022 10:23:57.589 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (50ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 10:23:57.623 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2451.9445 ms
+2022-11-04 11:01:08.397 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 11:01:08.489 +01:00 [INF] warn: 04/11/2022 11:01:08.484 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 11:01:08.811 +01:00 [INF] info: 04/11/2022 11:01:08.811 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 11:01:09.509 +01:00 [INF] info: 04/11/2022 11:01:09.509 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (48ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 11:01:09.543 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2387.4703 ms
+2022-11-04 11:42:40.488 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 11:42:40.577 +01:00 [INF] warn: 04/11/2022 11:42:40.573 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 11:42:40.894 +01:00 [INF] info: 04/11/2022 11:42:40.894 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 11:42:41.601 +01:00 [INF] info: 04/11/2022 11:42:41.601 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (53ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 11:42:41.634 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2380.1926 ms
+2022-11-04 11:54:02.478 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 11:54:02.555 +01:00 [INF] warn: 04/11/2022 11:54:02.551 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 11:54:02.882 +01:00 [INF] info: 04/11/2022 11:54:02.882 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 11:54:03.585 +01:00 [INF] info: 04/11/2022 11:54:03.585 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (47ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 11:54:03.624 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2402.2738 ms
+2022-11-04 12:06:09.245 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:06:09.325 +01:00 [INF] warn: 04/11/2022 12:06:09.322 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:06:09.635 +01:00 [INF] info: 04/11/2022 12:06:09.635 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 12:06:10.364 +01:00 [INF] info: 04/11/2022 12:06:10.364 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (64ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 12:09:23.007 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:09:23.086 +01:00 [INF] warn: 04/11/2022 12:09:23.082 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:09:23.402 +01:00 [INF] info: 04/11/2022 12:09:23.402 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 12:09:24.092 +01:00 [INF] info: 04/11/2022 12:09:24.092 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (53ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 12:09:24.123 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2374.9830 ms
+2022-11-04 12:09:30.239 +01:00 [INF] info: 04/11/2022 12:09:30.239 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 12:09:30.249 +01:00 [INF] info: 04/11/2022 12:09:30.249 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 12:09:30.255 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 27.8246 ms
+2022-11-04 12:09:35.576 +01:00 [INF] info: 04/11/2022 12:09:35.576 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 12:09:35.583 +01:00 [INF] info: 04/11/2022 12:09:35.583 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 12:09:35.588 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 78.3785 ms
+2022-11-04 12:19:53.310 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:19:53.384 +01:00 [INF] warn: 04/11/2022 12:19:53.380 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:19:53.711 +01:00 [INF] info: 04/11/2022 12:19:53.711 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 12:19:54.420 +01:00 [INF] info: 04/11/2022 12:19:54.420 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (48ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 12:19:54.452 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2403.4153 ms
+2022-11-04 12:22:22.709 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:22:22.795 +01:00 [INF] warn: 04/11/2022 12:22:22.791 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:22:23.122 +01:00 [INF] info: 04/11/2022 12:22:23.122 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 12:22:23.845 +01:00 [INF] info: 04/11/2022 12:22:23.845 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (58ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 12:22:23.879 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2410.2150 ms
+2022-11-04 12:26:06.790 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:26:06.868 +01:00 [INF] warn: 04/11/2022 12:26:06.864 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:26:07.188 +01:00 [INF] info: 04/11/2022 12:26:07.188 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 12:26:07.887 +01:00 [INF] info: 04/11/2022 12:26:07.887 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (47ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 12:26:07.919 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2378.0153 ms
+2022-11-04 12:26:39.134 +01:00 [INF] HTTP GET /api/Account/GetUserList responded 401 in 719.0021 ms
+2022-11-04 12:41:31.121 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:41:31.202 +01:00 [INF] warn: 04/11/2022 12:41:31.198 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:41:31.534 +01:00 [INF] info: 04/11/2022 12:41:31.534 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 12:41:32.259 +01:00 [INF] info: 04/11/2022 12:41:32.259 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (49ms) [Parameters=[@__userLogin_UserName_0='administrator' (Size = 50), @__userLogin_Password_1='administrator' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 12:41:32.292 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2497.9178 ms
+2022-11-04 12:47:37.086 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:47:37.177 +01:00 [INF] warn: 04/11/2022 12:47:37.173 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:47:37.493 +01:00 [INF] info: 04/11/2022 12:47:37.493 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 12:47:38.192 +01:00 [INF] info: 04/11/2022 12:47:38.192 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (47ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 12:47:38.225 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2369.0741 ms
+2022-11-04 12:48:28.464 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:48:28.515 +01:00 [INF] warn: 04/11/2022 12:48:28.511 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:48:28.729 +01:00 [INF] info: 04/11/2022 12:48:28.729 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 12:48:28.773 +01:00 [INF] info: 04/11/2022 12:48:28.773 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+2022-11-04 12:48:28.798 +01:00 [INF] info: 04/11/2022 12:48:28.798 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-11-04 12:48:28.801 +01:00 [INF] info: 04/11/2022 12:48:28.801 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+2022-11-04 12:48:28.802 +01:00 [INF] info: 04/11/2022 12:48:28.802 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-11-04 12:48:28.825 +01:00 [INF] info: 04/11/2022 12:48:28.825 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [MigrationId], [ProductVersion]
+      FROM [__EFMigrationsHistory]
+      ORDER BY [MigrationId];
+2022-11-04 12:48:28.839 +01:00 [INF] info: 04/11/2022 12:48:28.839 RelationalEventId.MigrationsNotApplied[20405] (Microsoft.EntityFrameworkCore.Migrations) 
+      No migrations were applied. The database is already up to date.
+2022-11-04 12:53:49.705 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:53:49.803 +01:00 [INF] warn: 04/11/2022 12:53:49.797 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 12:53:50.143 +01:00 [INF] info: 04/11/2022 12:53:50.143 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 12:53:50.858 +01:00 [INF] info: 04/11/2022 12:53:50.858 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (48ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 12:53:50.898 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2435.9798 ms
+2022-11-04 13:00:08.020 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:00:08.108 +01:00 [INF] warn: 04/11/2022 13:00:08.104 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:00:08.421 +01:00 [INF] info: 04/11/2022 13:00:08.421 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:00:09.121 +01:00 [INF] info: 04/11/2022 13:00:09.121 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (46ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:00:09.152 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2412.9852 ms
+2022-11-04 13:00:37.478 +01:00 [INF] info: 04/11/2022 13:00:37.478 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:00:37.489 +01:00 [INF] info: 04/11/2022 13:00:37.488 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:00:37.493 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 40.3652 ms
+2022-11-04 13:00:38.932 +01:00 [INF] info: 04/11/2022 13:00:38.932 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:00:38.939 +01:00 [INF] info: 04/11/2022 13:00:38.939 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:00:38.943 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 67.0081 ms
+2022-11-04 13:00:46.413 +01:00 [INF] info: 04/11/2022 13:00:46.413 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:00:46.418 +01:00 [INF] info: 04/11/2022 13:00:46.418 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:00:46.423 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 10.9820 ms
+2022-11-04 13:00:57.831 +01:00 [INF] info: 04/11/2022 13:00:57.831 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:00:57.839 +01:00 [INF] info: 04/11/2022 13:00:57.839 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:00:57.845 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 14.4256 ms
+2022-11-04 13:00:58.665 +01:00 [INF] info: 04/11/2022 13:00:58.665 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:00:58.675 +01:00 [INF] info: 04/11/2022 13:00:58.675 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:00:58.682 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 17.6471 ms
+2022-11-04 13:00:59.178 +01:00 [INF] info: 04/11/2022 13:00:59.178 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:00:59.183 +01:00 [INF] info: 04/11/2022 13:00:59.183 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:00:59.188 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 11.1815 ms
+2022-11-04 13:00:59.371 +01:00 [INF] info: 04/11/2022 13:00:59.371 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:00:59.376 +01:00 [INF] info: 04/11/2022 13:00:59.376 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:00:59.392 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 21.8769 ms
+2022-11-04 13:00:59.550 +01:00 [INF] info: 04/11/2022 13:00:59.550 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:00:59.556 +01:00 [INF] info: 04/11/2022 13:00:59.556 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:00:59.562 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 13.7867 ms
+2022-11-04 13:00:59.711 +01:00 [INF] info: 04/11/2022 13:00:59.711 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:00:59.719 +01:00 [INF] info: 04/11/2022 13:00:59.719 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:00:59.727 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 16.5466 ms
+2022-11-04 13:00:59.876 +01:00 [INF] info: 04/11/2022 13:00:59.876 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:00:59.882 +01:00 [INF] info: 04/11/2022 13:00:59.882 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:00:59.888 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 12.7728 ms
+2022-11-04 13:01:00.032 +01:00 [INF] info: 04/11/2022 13:01:00.032 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:01:00.038 +01:00 [INF] info: 04/11/2022 13:01:00.038 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:01:00.044 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 13.2690 ms
+2022-11-04 13:01:00.223 +01:00 [INF] info: 04/11/2022 13:01:00.223 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:01:00.228 +01:00 [INF] info: 04/11/2022 13:01:00.228 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:01:00.234 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 11.7244 ms
+2022-11-04 13:01:00.402 +01:00 [INF] info: 04/11/2022 13:01:00.402 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:01:00.407 +01:00 [INF] info: 04/11/2022 13:01:00.407 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:01:00.412 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 11.3502 ms
+2022-11-04 13:01:00.586 +01:00 [INF] info: 04/11/2022 13:01:00.586 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:01:00.593 +01:00 [INF] info: 04/11/2022 13:01:00.593 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:01:00.600 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 15.1977 ms
+2022-11-04 13:01:00.737 +01:00 [INF] info: 04/11/2022 13:01:00.737 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:01:00.743 +01:00 [INF] info: 04/11/2022 13:01:00.743 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:01:00.748 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 11.8087 ms
+2022-11-04 13:01:00.959 +01:00 [INF] info: 04/11/2022 13:01:00.959 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:01:00.965 +01:00 [INF] info: 04/11/2022 13:01:00.965 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:01:00.972 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 14.5229 ms
+2022-11-04 13:01:01.123 +01:00 [INF] info: 04/11/2022 13:01:01.123 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:01:01.127 +01:00 [INF] info: 04/11/2022 13:01:01.127 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:01:01.132 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 10.3435 ms
+2022-11-04 13:01:02.503 +01:00 [INF] info: 04/11/2022 13:01:02.503 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:01:02.508 +01:00 [INF] info: 04/11/2022 13:01:02.508 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:01:02.514 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 11.9724 ms
+2022-11-04 13:01:03.986 +01:00 [INF] info: 04/11/2022 13:01:03.986 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:01:03.991 +01:00 [INF] info: 04/11/2022 13:01:03.991 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:01:03.996 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 10.5184 ms
+2022-11-04 13:01:04.591 +01:00 [INF] info: 04/11/2022 13:01:04.591 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:01:04.596 +01:00 [INF] info: 04/11/2022 13:01:04.596 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:01:04.601 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 11.5369 ms
+2022-11-04 13:01:04.976 +01:00 [INF] info: 04/11/2022 13:01:04.976 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:01:05.002 +01:00 [INF] info: 04/11/2022 13:01:05.002 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (3ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:01:05.007 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 32.3788 ms
+2022-11-04 13:01:05.171 +01:00 [INF] info: 04/11/2022 13:01:05.170 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:01:05.176 +01:00 [INF] info: 04/11/2022 13:01:05.176 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:01:05.182 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 12.8216 ms
+2022-11-04 13:01:05.349 +01:00 [INF] info: 04/11/2022 13:01:05.349 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:01:05.355 +01:00 [INF] info: 04/11/2022 13:01:05.355 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:01:05.360 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 11.7384 ms
+2022-11-04 13:01:05.677 +01:00 [INF] info: 04/11/2022 13:01:05.677 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:01:05.684 +01:00 [INF] info: 04/11/2022 13:01:05.684 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:01:05.690 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 14.0405 ms
+2022-11-04 13:01:12.786 +01:00 [INF] HTTP GET /favicon.ico responded 404 in 0.1041 ms
+2022-11-04 13:03:33.325 +01:00 [INF] info: 04/11/2022 13:03:33.325 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:03:33.332 +01:00 [INF] info: 04/11/2022 13:03:33.332 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:03:33.337 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 13.4255 ms
+2022-11-04 13:03:49.224 +01:00 [INF] info: 04/11/2022 13:03:49.224 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:03:49.232 +01:00 [INF] info: 04/11/2022 13:03:49.232 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (3ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:03:49.236 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 13.1102 ms
+2022-11-04 13:03:52.297 +01:00 [INF] info: 04/11/2022 13:03:52.297 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:03:52.304 +01:00 [INF] info: 04/11/2022 13:03:52.304 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:03:52.315 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 19.1590 ms
+2022-11-04 13:04:19.776 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 22.3913 ms
+2022-11-04 13:05:02.041 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 1.5213 ms
+2022-11-04 13:05:02.842 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 1.4429 ms
+2022-11-04 13:05:03.274 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 1.6428 ms
+2022-11-04 13:05:03.441 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 1.5390 ms
+2022-11-04 13:05:03.627 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 7.4386 ms
+2022-11-04 13:05:03.773 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 1.2044 ms
+2022-11-04 13:05:03.906 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 1.2453 ms
+2022-11-04 13:05:15.793 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 1.6647 ms
+2022-11-04 13:05:16.422 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 4.0328 ms
+2022-11-04 13:05:20.796 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 1.5143 ms
+2022-11-04 13:05:21.344 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 3.2358 ms
+2022-11-04 13:05:23.726 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 1.3363 ms
+2022-11-04 13:05:24.713 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 1.6348 ms
+2022-11-04 13:05:25.304 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 1.2468 ms
+2022-11-04 13:05:25.493 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 14.4422 ms
+2022-11-04 13:05:25.647 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 1.4663 ms
+2022-11-04 13:05:25.801 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 1.5543 ms
+2022-11-04 13:05:25.947 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 1.2107 ms
+2022-11-04 13:05:43.102 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 1.8731 ms
+2022-11-04 13:06:03.874 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 17.8655 ms
+2022-11-04 13:06:22.990 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 1.3246 ms
+2022-11-04 13:06:53.734 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 0.4895 ms
+2022-11-04 13:07:11.648 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2.3173 ms
+2022-11-04 13:08:06.568 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 278.5399 ms
+2022-11-04 13:08:17.850 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 11.8886 ms
+2022-11-04 13:08:22.577 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2.9686 ms
+2022-11-04 13:09:10.461 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 15.9276 ms
+2022-11-04 13:09:14.306 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 1.3325 ms
+2022-11-04 13:09:41.099 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 10.0227 ms
+2022-11-04 13:10:26.887 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:10:26.905 +01:00 [INF] warn: 04/11/2022 13:10:26.901 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:10:27.220 +01:00 [INF] info: 04/11/2022 13:10:27.220 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:10:27.919 +01:00 [INF] info: 04/11/2022 13:10:27.919 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (52ms) [Parameters=[@__userLogin_UserName_0='Admin' (Size = 50), @__userLogin_Password_1='Admin' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:10:27.948 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2035.5968 ms
+2022-11-04 13:19:14.427 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:19:14.506 +01:00 [INF] warn: 04/11/2022 13:19:14.502 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:19:14.818 +01:00 [INF] info: 04/11/2022 13:19:14.818 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:19:15.513 +01:00 [INF] info: 04/11/2022 13:19:15.512 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (49ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:19:15.551 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2368.5456 ms
+2022-11-04 13:19:28.359 +01:00 [INF] HTTP GET /api/Cuenta/GetToken responded 404 in 0.1965 ms
+2022-11-04 13:22:56.721 +01:00 [INF] HTTP GET /api/account/gettoken responded 405 in 3.4338 ms
+2022-11-04 13:35:27.963 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:35:27.983 +01:00 [INF] warn: 04/11/2022 13:35:27.979 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:35:28.289 +01:00 [INF] info: 04/11/2022 13:35:28.289 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:35:29.037 +01:00 [INF] info: 04/11/2022 13:35:29.037 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (57ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:35:29.068 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2396.2880 ms
+2022-11-04 13:39:53.762 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:39:53.838 +01:00 [INF] warn: 04/11/2022 13:39:53.835 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:39:54.179 +01:00 [INF] info: 04/11/2022 13:39:54.179 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:39:54.912 +01:00 [INF] info: 04/11/2022 13:39:54.912 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (52ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE (CASE
+          WHEN [u].[Name] = @__userLogin_UserName_0 THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END & CASE
+          WHEN [u].[Password] = @__userLogin_Password_1 THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END) = CAST(1 AS bit)
+2022-11-04 13:39:54.950 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2484.0963 ms
+2022-11-04 13:42:43.951 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:42:44.033 +01:00 [INF] warn: 04/11/2022 13:42:44.030 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:42:44.352 +01:00 [INF] info: 04/11/2022 13:42:44.352 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:42:45.064 +01:00 [INF] info: 04/11/2022 13:42:45.064 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (54ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:42:45.109 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2452.3277 ms
+2022-11-04 13:47:39.636 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:47:39.716 +01:00 [INF] warn: 04/11/2022 13:47:39.711 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:47:40.057 +01:00 [INF] info: 04/11/2022 13:47:40.057 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:47:40.756 +01:00 [INF] info: 04/11/2022 13:47:40.756 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (49ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:47:40.792 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2411.6664 ms
+2022-11-04 13:51:08.039 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:51:08.133 +01:00 [INF] warn: 04/11/2022 13:51:08.130 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:51:08.461 +01:00 [INF] info: 04/11/2022 13:51:08.461 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:51:09.228 +01:00 [INF] info: 04/11/2022 13:51:09.228 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (58ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:51:09.263 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2479.2808 ms
+2022-11-04 13:52:09.224 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:52:09.302 +01:00 [INF] warn: 04/11/2022 13:52:09.298 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:52:09.634 +01:00 [INF] info: 04/11/2022 13:52:09.633 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:52:10.360 +01:00 [INF] info: 04/11/2022 13:52:10.360 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (49ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:52:10.394 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2452.9859 ms
+2022-11-04 13:58:25.345 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:58:25.420 +01:00 [INF] warn: 04/11/2022 13:58:25.417 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:58:25.744 +01:00 [INF] info: 04/11/2022 13:58:25.744 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:58:26.456 +01:00 [INF] info: 04/11/2022 13:58:26.456 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (57ms) [Parameters=[@__userLogin_UserName_0='Admin' (Size = 50), @__userLogin_Password_1='Admin' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:58:26.489 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2435.7262 ms
+2022-11-04 13:58:53.864 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:58:53.944 +01:00 [INF] warn: 04/11/2022 13:58:53.941 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 13:58:54.259 +01:00 [INF] info: 04/11/2022 13:58:54.259 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 13:58:54.970 +01:00 [INF] info: 04/11/2022 13:58:54.970 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (56ms) [Parameters=[@__userLogin_UserName_0='Admin' (Size = 50), @__userLogin_Password_1='Admin' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 13:58:55.004 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2430.7634 ms
+2022-11-04 14:03:18.732 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 14:03:18.818 +01:00 [INF] warn: 04/11/2022 14:03:18.815 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 14:03:19.137 +01:00 [INF] info: 04/11/2022 14:03:19.137 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 14:03:19.842 +01:00 [INF] info: 04/11/2022 14:03:19.841 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (48ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 14:03:19.880 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2402.9032 ms
+2022-11-04 14:19:59.921 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 14:20:00.011 +01:00 [INF] warn: 04/11/2022 14:20:00.007 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-11-04 14:20:00.338 +01:00 [INF] info: 04/11/2022 14:20:00.338 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.10 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-11-04 14:20:01.063 +01:00 [INF] info: 04/11/2022 14:20:01.063 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (56ms) [Parameters=[@__userLogin_UserName_0='string' (Size = 50), @__userLogin_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreateAt], [u].[CreateBy], [u].[DeleteAt], [u].[DeleteBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdateAt], [u].[UpdateBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogin_UserName_0) AND ([u].[Password] = @__userLogin_Password_1)
+2022-11-04 14:20:01.098 +01:00 [INF] HTTP POST /api/Account/GetToken responded 400 in 2479.1829 ms
