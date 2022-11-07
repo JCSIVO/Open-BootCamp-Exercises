@@ -1,0 +1,24 @@
+C:\Users\Jose\Desktop\Unidad-7\Unidad-7\University\LinqSnippets\bin\Debug\net6.0\LinqSnippets.deps.json
+C:\Users\Jose\Desktop\Unidad-7\Unidad-7\University\LinqSnippets\bin\Debug\net6.0\LinqSnippets.dll
+C:\Users\Jose\Desktop\Unidad-7\Unidad-7\University\LinqSnippets\bin\Debug\net6.0\LinqSnippets.pdb
+C:\Users\Jose\Desktop\Unidad-7\Unidad-7\University\LinqSnippets\obj\Debug\net6.0\LinqSnippets.csproj.AssemblyReference.cache
+C:\Users\Jose\Desktop\Unidad-7\Unidad-7\University\LinqSnippets\obj\Debug\net6.0\LinqSnippets.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jose\Desktop\Unidad-7\Unidad-7\University\LinqSnippets\obj\Debug\net6.0\LinqSnippets.AssemblyInfoInputs.cache
+C:\Users\Jose\Desktop\Unidad-7\Unidad-7\University\LinqSnippets\obj\Debug\net6.0\LinqSnippets.AssemblyInfo.cs
+C:\Users\Jose\Desktop\Unidad-7\Unidad-7\University\LinqSnippets\obj\Debug\net6.0\LinqSnippets.csproj.CoreCompileInputs.cache
+C:\Users\Jose\Desktop\Unidad-7\Unidad-7\University\LinqSnippets\obj\Debug\net6.0\LinqSnippets.dll
+C:\Users\Jose\Desktop\Unidad-7\Unidad-7\University\LinqSnippets\obj\Debug\net6.0\refint\LinqSnippets.dll
+C:\Users\Jose\Desktop\Unidad-7\Unidad-7\University\LinqSnippets\obj\Debug\net6.0\LinqSnippets.pdb
+C:\Users\Jose\Desktop\Unidad-7\Unidad-7\University\LinqSnippets\obj\Debug\net6.0\ref\LinqSnippets.dll
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\10.Logs en aplicaciones .Net\Unidad-10\University\LinqSnippets\bin\Debug\net6.0\LinqSnippets.deps.json
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\10.Logs en aplicaciones .Net\Unidad-10\University\LinqSnippets\bin\Debug\net6.0\LinqSnippets.dll
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\10.Logs en aplicaciones .Net\Unidad-10\University\LinqSnippets\bin\Debug\net6.0\LinqSnippets.pdb
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\10.Logs en aplicaciones .Net\Unidad-10\University\LinqSnippets\obj\Debug\net6.0\LinqSnippets.csproj.AssemblyReference.cache
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\10.Logs en aplicaciones .Net\Unidad-10\University\LinqSnippets\obj\Debug\net6.0\LinqSnippets.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\10.Logs en aplicaciones .Net\Unidad-10\University\LinqSnippets\obj\Debug\net6.0\LinqSnippets.AssemblyInfoInputs.cache
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\10.Logs en aplicaciones .Net\Unidad-10\University\LinqSnippets\obj\Debug\net6.0\LinqSnippets.AssemblyInfo.cs
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\10.Logs en aplicaciones .Net\Unidad-10\University\LinqSnippets\obj\Debug\net6.0\LinqSnippets.csproj.CoreCompileInputs.cache
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\10.Logs en aplicaciones .Net\Unidad-10\University\LinqSnippets\obj\Debug\net6.0\LinqSnippets.dll
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\10.Logs en aplicaciones .Net\Unidad-10\University\LinqSnippets\obj\Debug\net6.0\refint\LinqSnippets.dll
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\10.Logs en aplicaciones .Net\Unidad-10\University\LinqSnippets\obj\Debug\net6.0\LinqSnippets.pdb
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\10.Logs en aplicaciones .Net\Unidad-10\University\LinqSnippets\obj\Debug\net6.0\ref\LinqSnippets.dll
