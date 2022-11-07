@@ -1,0 +1,15 @@
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\11.Flujo asíncrono\Unidad-11\ExampleFlujoAsync\ExampleFlujoAsync\bin\Debug\net6.0\ExampleFlujoAsync.exe
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\11.Flujo asíncrono\Unidad-11\ExampleFlujoAsync\ExampleFlujoAsync\bin\Debug\net6.0\ExampleFlujoAsync.deps.json
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\11.Flujo asíncrono\Unidad-11\ExampleFlujoAsync\ExampleFlujoAsync\bin\Debug\net6.0\ExampleFlujoAsync.runtimeconfig.json
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\11.Flujo asíncrono\Unidad-11\ExampleFlujoAsync\ExampleFlujoAsync\bin\Debug\net6.0\ExampleFlujoAsync.dll
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\11.Flujo asíncrono\Unidad-11\ExampleFlujoAsync\ExampleFlujoAsync\bin\Debug\net6.0\ExampleFlujoAsync.pdb
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\11.Flujo asíncrono\Unidad-11\ExampleFlujoAsync\ExampleFlujoAsync\obj\Debug\net6.0\ExampleFlujoAsync.csproj.AssemblyReference.cache
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\11.Flujo asíncrono\Unidad-11\ExampleFlujoAsync\ExampleFlujoAsync\obj\Debug\net6.0\ExampleFlujoAsync.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\11.Flujo asíncrono\Unidad-11\ExampleFlujoAsync\ExampleFlujoAsync\obj\Debug\net6.0\ExampleFlujoAsync.AssemblyInfoInputs.cache
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\11.Flujo asíncrono\Unidad-11\ExampleFlujoAsync\ExampleFlujoAsync\obj\Debug\net6.0\ExampleFlujoAsync.AssemblyInfo.cs
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\11.Flujo asíncrono\Unidad-11\ExampleFlujoAsync\ExampleFlujoAsync\obj\Debug\net6.0\ExampleFlujoAsync.csproj.CoreCompileInputs.cache
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\11.Flujo asíncrono\Unidad-11\ExampleFlujoAsync\ExampleFlujoAsync\obj\Debug\net6.0\ExampleFlujoAsync.dll
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\11.Flujo asíncrono\Unidad-11\ExampleFlujoAsync\ExampleFlujoAsync\obj\Debug\net6.0\refint\ExampleFlujoAsync.dll
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\11.Flujo asíncrono\Unidad-11\ExampleFlujoAsync\ExampleFlujoAsync\obj\Debug\net6.0\ExampleFlujoAsync.pdb
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\11.Flujo asíncrono\Unidad-11\ExampleFlujoAsync\ExampleFlujoAsync\obj\Debug\net6.0\ExampleFlujoAsync.genruntimeconfig.cache
+C:\Users\Jose\Desktop\campus-open-bootcamp\3.Back-End\1.Back-End C#\4.APIs con .NET\11.Flujo asíncrono\Unidad-11\ExampleFlujoAsync\ExampleFlujoAsync\obj\Debug\net6.0\ref\ExampleFlujoAsync.dll
