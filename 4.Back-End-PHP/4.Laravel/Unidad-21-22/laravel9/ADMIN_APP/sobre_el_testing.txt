@@ -1,0 +1,13 @@
+1 - Crear una aplicación
+2 - Manual -> Modelo / Vista / Controlador
+
+3 - Comandos 
+
+Salvador: Testing PHPUnit
+
+1 - Para funcionalidad se tiene que crear un código de testing.
+2 - Un código para testear no sólo debe comprobar que la aplicación funciona, también falla cuando debe. (Ejemplo de fallo: Usuario y contraseña incorrecto) 
+3 - Cada función de testing debe probar una funcionalidad.
+4 - Las respuestas deben ser binarias.
+5 - Si nuestra funcionalidad crece, nuestro código de test también crece para poder asegurar que la aplicación sigue funcionando correctamente.
+6 - Los test deben consumir un tiempo coherente. 
