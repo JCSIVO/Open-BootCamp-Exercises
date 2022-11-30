@@ -1,0 +1,7 @@
+# match /fist
+#index:
+second_page:
+#    path: /
+  path: /second
+#    controller: App\Controller\DefaultController::index
+  controller: App\Controller\DefaultController::index

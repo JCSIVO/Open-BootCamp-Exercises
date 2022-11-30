@@ -1,0 +1,9 @@
+article_:
+    path: /{_locale}/{year}/{slug}.{_format}
+    controller: App\Controller\ArticleController::index
+    defaults: 
+        _format: html
+    requirements: 
+        _locale: en|fr
+        _format: html|rss
+        year: \d+
