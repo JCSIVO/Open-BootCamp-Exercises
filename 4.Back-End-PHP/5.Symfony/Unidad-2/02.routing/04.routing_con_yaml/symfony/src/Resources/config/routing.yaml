@@ -1,0 +1,4 @@
+articles:
+  prefix: '/article_'
+  resource: 'article/'
+  type: directory
