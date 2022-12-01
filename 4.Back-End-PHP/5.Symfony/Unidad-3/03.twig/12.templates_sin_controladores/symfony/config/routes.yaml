@@ -1,0 +1,21 @@
+controllers:
+    resource: ../src/Controller/
+    type: annotation
+
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation
+
+private:
+    path: /private
+    controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+    defaults:
+        template: legalTexts/privacy.html.twig
+
+about_us:
+    path:          /about-us
+    controller:    Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+    defaults:
+        template:  'legalTexts/about.html.twig'
+        maxAge:    86400
+        sharedAge: 86400

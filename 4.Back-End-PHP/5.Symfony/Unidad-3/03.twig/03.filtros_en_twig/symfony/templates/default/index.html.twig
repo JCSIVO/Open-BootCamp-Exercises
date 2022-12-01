@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    hello {{ controller_name }}
+    <a href="{{path('second')}}"> segunda ruta </a>
+    <img src="{{asset('./img/smiley.gif')}}" alt="smile face" height="42" width="42"/> 
+    {{'Mi Primera cadena de texto' | upper }}
+    {{'Mi Primera cadena de texto' | lower }}
+    <h2>FIRST ELEMENT </h2>
+    {{ [1, 2, 3, 4, 5, ]|first }}
+    {# definiendo la variable #}
+    {% set array = [1, 2, 3, 4, 5, ] %}
+    {{ array|first }}
+    {{ {a: 1, b: 2, c: 3, d: 4 }|first}}
+    {{'hello World'|first|upper}}
+    <h2>FORMATOS DE NUMEROS </h2>
+    {{200.1243523465|number_format}}
+    {{200.1243523465|number_format(2, ',', '.')}}
+    {{-200.1243523465|number_format(2, ',', '.')}}
+</div>
+{% endblock %}

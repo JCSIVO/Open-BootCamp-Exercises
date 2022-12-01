@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!
+{% endblock %}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+
+	<div class="example-wrapper">
+		hello
+		{{ controller_name }}
+		<a href="{{path('second')}}">
+			segunda ruta
+		</a>
+		<img src="{{asset('./img/smiley.gif')}}" alt="smile face" height="42" width="42"/>
+		<h2>Ciclos</h2>
+		{# begin:: ciclos #}
+		{% set start_year = date() | date('Y') %}
+		{% set end_year = start_year + 5 %}
+		{% for year in start_year..end_year %}
+			{{ year }}
+			{{ cycle(['odd', 'even'], loop.index0 ) }}
+			|
+		{% endfor %}
+		<hr>
+		{# otro ejemplo #}
+		{% set fruits = ['manzana', 'naranja', 'limon'] %}
+		{% for fruit in fruits %}
+			{{ fruit }}
+			|
+		{% endfor %}
+		<hr>
+		{% for i in 0..10 %}
+			{{i}}
+			-
+			{{ cycle(fruits, i) }}
+			|
+		{% endfor %}
+		<hr>
+		{# end:: ciclos #}
+		<h2>Condicionales</h2>
+		{% set online = false %}
+		{% if online %}
+			<p>estamos online</p>
+		{% else %}
+			<p>NO estamos online</p>
+		{% endif %}
+        {# otro ejemplo #}
+        {% set temperatura = 20 %}
+        {% if temperatura < 18 %}
+            <p>ui que frio hace </p>
+        {% elseif temperatura > 18 and temperatura < 27  %}
+            <p>hace buena temperatura </p>
+        {% else %}
+            <p>Que calor!!!</p>
+        {% endif %}
+
+	</div>
+{% endblock %}

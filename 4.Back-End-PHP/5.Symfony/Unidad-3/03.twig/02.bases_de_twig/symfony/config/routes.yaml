@@ -1,0 +1,16 @@
+controllers:
+    resource: ../src/Controller/
+    type: annotation
+
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation
+
+legal: 
+    path: /privacy
+    controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+    defaults: 
+        template: static\privacy.html.twig
+        statusCode: 200
+        context: 
+            site_name: 'aviso legal'
