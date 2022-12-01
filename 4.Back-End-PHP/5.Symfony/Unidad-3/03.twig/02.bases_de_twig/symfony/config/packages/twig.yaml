@@ -1,0 +1,10 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    globals: 
+        analytics: 'UA-124352345'
+        analytics_from_parameters: '%analytics%'
+        analytics_from_env_file: '%env(APP_SECRET)%'
+        html_contents: '@App\Service\SomeService'
+when@test:
+    twig:
+        strict_variables: true

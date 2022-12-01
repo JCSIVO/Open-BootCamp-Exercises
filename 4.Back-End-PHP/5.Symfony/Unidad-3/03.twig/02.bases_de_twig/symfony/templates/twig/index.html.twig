@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TwigController!{% endblock %}
+
+{% block body %}
+    {{parent()}}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+
+	<div class="example-wrapper">
+
+		<h1>Sintaxis de TWIG ✅</h1>
+        <hr>
+		Llamar al contenido de una variable: {{ controller_name }} <br>
+        Usar funciones: 
+        {% set mi_primera_variable = 'Hello World' %} 
+        {{ mi_primera_variable }}<br>
+        {{ mi_primera_variable | upper}}<br>
+        Uso de comentarios: {# ... #}
+        {#
+        {% set mi_primera_variable = 'Hello World' %} 
+        #}
+        <hr>
+        nueva variable por contexto => `otra_variable`: {{otra_variable}}
+        <hr>
+        <a href="{{path('default', {parameter: 'hello-world'})}}"> llevame a default</a>
+        <a href="{{path('twig')}}"> llevame a twig</a>
+        <a href="{{path('twig_2')}}"> llevame a twig-2</a>
+        <hr>
+        Usando assets:
+        <img src="{{asset('images/logo.svg')}}" alt="symfony"/>
+        <img src="{{absolute_url(asset('images/logo.svg'))}}" alt="symfony"/>
+        <img src="{{absolute_url('images/logo.svg')}}" alt="symfony"/>
+        <hr>
+		variables globales: {{analytics}}
+        variables globales desde parameters: {{analytics_from_parameters}}
+        variables globales desde el env file: {{analytics_from_env_file}}
+        <hr>
+        {{ dump() }}
+        {% dump analytics %}
+
+        {{html_contents.someMethod() | raw }}
+        <hr>
+        {{dump(html_contents.existRoute('product/index.html.twig')) }}
+
+        <hr>
+        {{ include ('static/privacy.html.twig', {site_name: 'variable site name'})}}
+        <hr>
+        {{render (controller('App\\Controller\\DefaultController::legalPrivacy'))}}
+	</div>
+{% endblock %}
+
