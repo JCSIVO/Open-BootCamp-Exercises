@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}asiganturas de alumno
+{% endblock %}
+
+{% block body %}
+	<h1>asignaturas de alumno</h1>
+	{#{{dump()}}#}
+
+    <table>
+    {% for jey, subjects in listSubjects %}
+        <tr>
+            <td>{{subjects.nombre}}</td>
+            <td>
+                <input type="checkbox" name="{{subjects.nombre}}" value="{{subjects.id}}"
+                {% for index, pupilSubject in subjects.alumno %}
+                    {% if pupilSubject.id == pupil.id %}
+                    checked
+                    {% endif %}
+                {% endfor %}
+                onclick="changeStatusSubject({{pupil.id}}, {{subjects.id}})">
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+    <br>
+    <a href="{{path('lista_de_alumnos')}}">Go home</a>
+{% endblock %}
+{% block javascripts %}
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+    function changeStatusSubject(pupilId, subjectId){
+        firstResquest = $.ajax({
+            type: "POST",
+            url: "{{path('subject_pupil_change')}}",
+            data: {
+                pupilId: pupilId,
+                subjectId: subjectId 
+            },
+            success: function(response){
+                console.log(response);
+            }
+        });
+    }
+</script>
+{% endblock %}

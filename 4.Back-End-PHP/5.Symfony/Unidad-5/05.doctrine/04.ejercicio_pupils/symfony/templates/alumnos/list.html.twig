@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block title %}Lista de alumnos{% endblock %}
+
+{% block body %}
+<h1>Lista de alumnos</h1>
+<table>
+{% for pupils in listPupils %}
+    <tr>
+        <td>{{pupils.nombre}}</td>
+        <td><a href="{{path('notas_de_alumno', {'id': pupils.id})}}">Notas</a></td>
+        <td><a href="{{path('asignaturas_de_alumno', {'id': pupils.id})}}">Asignaturas</a></td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock body %}
