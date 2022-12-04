@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %}Notas de alumno
+{% endblock %}
+
+{% block body %}
+	<h1></h1>
+	<table>
+		{% for subject in subjectsList %}
+			<tr stryle="color{% if subject['note'] >= 5 %}red{% endif %}">
+				<td>{{subject['subjectName']}}</td>
+				<td>{{subject['note']}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+	Media
+	{% set subjectNumber = subjectsList|length %}
+	{% if subjectNumber > 0 %}
+		{% set noteTotal = 0 %}
+		{% for subject in subjectsList %}
+			{% set noteTotal = noteTotal + subject['note'] %}
+		{% endfor %}
+		{% set average = noteTotal / subjectNumber %}
+		{{average}}
+	{% endif %}
+{% endblock %}
