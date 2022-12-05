@@ -1,0 +1,59 @@
+version: "3"
+
+services:
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: symfony_phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8080:80
+    networks:
+      - symfony
+  db:
+    image: mysql:8.0.20
+    container_name: symfony_db
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - "./.data/db_app:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    #ports:
+    #  - 3306:3306
+    networks:
+      - symfony
+  php:
+    build:
+      context: ./.docker/php
+      args:
+        TIMEZONE: ${TIMEZONE}
+    image: symfony_php
+    container_name: symfony_php
+    volumes:
+      - ./symfony:/var/www/symfony/
+      - ./log/php:/srv/var/log
+    networks:
+      - symfony
+  nginx:
+    build:
+      context: ./.docker/nginx
+    image: symfony_nginx
+    container_name: symfony_nginx
+    volumes:
+      - ./symfony:/var/www/symfony/
+      - ./log/nginx:/var/log/nginx
+    ports:
+      - 80:80
+    networks:
+      - symfony
+    env_file:
+      - .env.nginx.local
+
+networks:
+  symfony:
