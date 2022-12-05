@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Issue{% endblock %}
+
+{% block body %}
+    <h1>Create new Issue</h1>
+
+    {{ include('issue/_form.html.twig') }}
+
+    <a href="{{ path('issue_index') }}">back to list</a>
+{% endblock %}

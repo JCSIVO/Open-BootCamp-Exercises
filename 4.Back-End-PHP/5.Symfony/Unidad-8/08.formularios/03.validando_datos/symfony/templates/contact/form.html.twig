@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">{{title}}</div>
+				</div>
+				<!-- -->
+				<div class="panel-body">
+					{{form_start(form, {'action': path('save'), 'attr': {'class': 'form-horizontal', 'role': 'form'}})}}
+					{% for field in form.children %}
+						<div class="form-group {% if field.vars.valid is defined and not field.vars.valid %}has-error{% endif %}">
+							{{form_label(field, null, {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+							<div class="col-sm-5">
+								{{ form_widget(field, {'attr': {'class': 'form-control'}}) }}
+							</div>
+							{% if field.vars.valid is defined %}
+								<div style="color: red">{{ form_errors(field) }}</div>
+							{% endif %}
+						</div>
+					{% endfor %}
+					{{form_end(form)}}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock body %}
