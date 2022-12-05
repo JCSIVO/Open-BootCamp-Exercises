@@ -1,0 +1,6 @@
+services:
+    app.user_registered_lister:
+      class: App\EventListener\UserRegisteredListener
+      arguments: ['@doctrine.orm.entity_manager']
+      tags:
+          - { name: kernel.event_listener, event: user.register, method: onUserRegistered }

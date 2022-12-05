@@ -1,0 +1,6 @@
+services:
+  app.login_listener:
+    class: App\EventListener\LoginListener
+    arguments: ['@doctrine.orm.entity_manager'];
+    tags: 
+      - { name: 'kernel.event_listener', event: 'security.interactive_login' }

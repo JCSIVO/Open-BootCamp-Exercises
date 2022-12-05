@@ -1,0 +1,9 @@
+services:
+    app.token_listener:
+        class: App\EventListener\TokenListener
+        arguments:
+            - '@app.token_validator'
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller }
+    app.token_validator:
+        class: App\Services\TokenValidatorService
