@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Issue index{% endblock %}
+
+{% block body %}
+    <h1>Issue index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for issue in issues %}
+            <tr>
+                <td>{{ issue.id }}</td>
+                <td>{{ issue.name }}</td>
+                <td>
+                    <a href="{{ path('issue_show', {'id': issue.id}) }}">show</a>
+                    <a href="{{ path('issue_edit', {'id': issue.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('issue_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,56 @@
+{{ form_start(form) }}
+{#
+    {{ form_widget(form) }}
+    #}
+{{ form_row(form.name) }}
+{{ form_row(form.description) }}
+<h3>tags</h3>
+<ul class="tags" data-index="{{form.tags|length > 0 ? form.tags|last.vars.name + 1 : 0}}" data-prototype="{{form_widget(form.tags.vars.prototype)|e('html_attr')}}"></ul>
+<button type="button" class="add_item_link" data-collection-holder-class="tags">
+	Add a tag
+</button>
+<!-- -->
+<button class="btn">{{ button_label|default('Save') }}</button>
+<script>
+    // añadir el tag para eliminar
+    const addTagFormDeleteLink = (item) => {
+        const removeFormButton = document.createElement('button');
+        removeFormButton.innerText = 'Delete this tag';
+
+        item.append(removeFormButton);
+
+        removeFormButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            item.remove();
+        })
+    }
+	const addFormToCollection = (e) => {
+        const collectionHolder = document.querySelector('.' + e.currentTarget.dataset.collectionHolderClass);
+        const item = document.createElement('li');
+        item.innerHTML = collectionHolder
+            .dataset
+            .prototype
+            .replace(
+                /__name/g, 
+                collectionHolder.dataset.index
+            );
+            collectionHolder.appendChild(item);
+            collectionHolder.dataset.index++;
+            // remove 
+            addTagFormDeleteLink(item);
+
+    }
+    document
+        .querySelectorAll('.add_item_link')
+        .forEach(btn => {
+            btn.addEventListener("click", addFormToCollection)
+        })
+
+    //delete
+    document
+        .querySelectorAll('ul.tags li')
+        .forEach((tag) => {
+            addTagFormDeleteLink(tag)
+        })
+</script>
+{{ form_end(form) }}
