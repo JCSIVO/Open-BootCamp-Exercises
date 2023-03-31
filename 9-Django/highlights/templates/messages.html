@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Mensajes</h3>
+    {% if messages %}
+        <ul class="messages" style="list-style-type: none;">
+            {% for message in messages %}
+            <li{% if messages.tags %} style="padding: 10px; margin: 10px; border-radius: 5px; background-color: lightgreen;" {% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

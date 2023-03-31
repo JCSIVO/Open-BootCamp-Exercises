@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:20-Django}/modularizacion/db.sqlite3",
+            "name": "Modularizacion"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

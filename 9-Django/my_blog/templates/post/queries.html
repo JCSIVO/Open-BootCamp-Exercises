@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Hola mundo</h1>
+    <h3>Todos los autores</h3>
+    <ul>
+        {% for author in authors %}
+        <li>{{ author.name }} ( {{ authors.email }} )</li>
+        {% endfor %}
+    </ul>
+    <h3>Total de autores: {{ authors|length }}</h3>
+
+    <h3>Buscando autor donde email = larry17@example.net</h3>
+    <ul>
+        {% for elm in filtered %}
+        <li> {{ elm.name }} | {{ elm.email }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Obteniendo un único elemento (filtrado por id)</h3>
+    <p>{{ author }}</p>
+    <p>{{ author.email }}</p>
+    <h3>Obteniendo los 10 primeros(limit)</h3>
+    <ul>
+        {%for limit in limits%}
+        <li>{{ limit.email }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Búsqueda limitada y con offset</h3>
+    <ul>
+        {% for offset in offsets %}
+        <li>{{ offset.email }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Elementos ordenados por email</h3>
+    <ul>
+        {% for order in orders %}
+        <li>{{ order.email }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Buscando elementos cuyo id sea menor o igual a 15</h3>
+    <ul>
+        {% for elm in filtereds2 %}
+        <li> {{ elm.email }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Buscando elementos cuyo nombre tenga yes</h3>
+    <ul>
+        {% for elm in filtereds3 %}
+        <li> {{ elm.name }}</li>
+        {% endfor %}
+</body>
+</html>
