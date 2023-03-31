@@ -1,0 +1,1 @@
+default_app_config = 'full.python3.path.to.your.app.messages.apps.MessagesConfig'

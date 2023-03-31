@@ -1,0 +1,116 @@
+:root {
+    --color-primary: #ffce00;
+    --color-secondary: #ffa300;
+    --color-text: #707789;
+    --color-bg: #dedede;
+    --font-title: Pillo;
+    --font-text: Amellia;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-text);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-title);
+    color: var(--color-text);
+}
+
+nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: var(--color-primary);
+}
+
+nav img {
+    margin: 25px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 30px;
+    font-weight: 700;
+    font-family: var(--font-title);
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+main {
+    background-color: var(--color-bg);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px;
+}
+
+footer {
+    width: 100vw;
+    min-height: 150px;
+    background-color: var(--color-text);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li a {
+    color: var(--color-bg);
+    text-decoration: none;
+}
+
+footer img {
+    margin: 25px;
+}
+
+.about {
+    display: flex;
+    padding: 25px;
+}
+
+.about-content {
+    width: 350px;
+    padding: 50px;
+}
+
+.photos {
+    margin-top: 50px;
+    display: flex;
+    justify-self: center;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+@font-face {
+    font-family: Pillo;
+    src: url('../fonts/Pillo.otf');
+}
+
+@font-face {
+    font-family: Amellia;
+    src: url('../fonts/Amellia.ttf');
+}

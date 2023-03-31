@@ -1,0 +1,191 @@
+:root {
+    --color-primary: #2ea3f2;
+    --color-text: #666;
+    --font-main: Carrots;
+    --font-text: Reka;
+}
+
+/* Main settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-text);
+    color: var(--color-text);
+}
+
+@font-face {
+    font-family: Carrots;
+    src: url('../fonts/Carrots.otf');
+}
+
+@font-face {
+    font-family: Reka;
+    src: url('../fonts/REKA.otf');
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-main);
+}
+/* End main settings */
+
+/* Layoutsettings */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    background-color: var(--color-primary);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--font-main);
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: var(--color-text);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 50px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-text);
+    width: 50%;
+    list-style-type: none;
+}
+
+.list li {
+    padding: 15px;
+    width: 100%;
+    border-bottom: 1px solid var(--color-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-detail {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-detail:hover {
+    background-color: white;
+    color: var(--color-primary);
+}
+
+.btn-edit {
+    background-color: #ffce00;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: white;
+    color: #ffce00;
+}
+
+.btn-delete {
+    background-color: #a10e2e;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: white;
+    color: #a10e2e;
+}
+
+.search {
+    margin: 20px;
+    width: 50%;
+}
+
+.search-bar {
+    padding: 5px;
+    width: 80%;
+}
+
+.btn-search {
+    width: 19%;
+    background-color: var(--color-primary);
+    color: white;
+    outline: none;
+    border: 0;
+    box-shadow: 0;
+    cursor: pointer;
+}
+
+.btn-search:hover {
+    background-color: white;
+    color: var(--color-primary);
+}
+
+.aux-btns {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.aux-btns a {
+    padding-right: 10px;
+    text-decoration: none;
+}
+
+
+
+/* End Layout settings */
+
+
+/* Index settings */
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 20px;
+    background-color: var(--color-primary);
+    text-decoration: none;
+}
+
+.card:hover {
+    background-color: var(--color-text);
+}
+
+/* End settings */
