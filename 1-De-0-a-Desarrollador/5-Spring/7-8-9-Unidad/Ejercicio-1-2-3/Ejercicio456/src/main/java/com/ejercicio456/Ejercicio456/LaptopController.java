@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
 
 import org.springframework.web.bind.annotation.PutMapping;
 
@@ -34,7 +34,7 @@ public class LaptopController {
     //Buscar todos los laptops
 
     @GetMapping("/api/laptops")
-    @ApiOperation("Buscar todos los Laptops")
+    @Operation(summary = "Buscar todos los Laptops")
     public List<Laptop> findAll(){
         return laptopRepository.findAll();
     }
@@ -43,7 +43,7 @@ public class LaptopController {
     //Buscar un laptops por su ID
 
     @GetMapping("/api/laptops/{id}")
-    @ApiOperation("Buscar los Laptops por ID")
+    @Operation(summary = "Buscar los Laptops por ID")
     public ResponseEntity<Laptop> findOneById(@PathVariable Long id){
         Optional<Laptop> laptopopt = laptopRepository.findById(id);
         if(laptopopt.isPresent())
@@ -57,7 +57,7 @@ public class LaptopController {
 
 
     @PostMapping("/api/laptops")
-    @ApiOperation("Insertar un nuevo Laptops")
+    @Operation(summary = "Insertar un nuevo Laptops")
         public ResponseEntity <Laptop> create(@RequestBody Laptop laptop) {
             if(laptop.getId() != null) {
                 return ResponseEntity.badRequest().build();
@@ -71,8 +71,8 @@ public class LaptopController {
     // Actualiazar un laptops existente en la base de datos
 
     @PutMapping("/api/laptops")
-    @ApiOperation("Actualizar los Laptops")
-    //@ApiOperation("Actualizar un libro existente")
+    @Operation(summary = "Actualizar los Laptops")
+    //@Operation(summary = "Actualizar un libro existente")
     public ResponseEntity <Laptop> update(@RequestBody Laptop laptop) {
         if(laptop.getId()==null){
             return ResponseEntity.badRequest().build();
@@ -88,7 +88,7 @@ public class LaptopController {
     //Borrar un laptops
 
     @DeleteMapping("/api/laptops/{id}")
-    @ApiOperation("Borra los Laptops")
+    @Operation(summary = "Borra los Laptops")
     public ResponseEntity<Laptop> deleteById(@PathVariable Long id){
         if(!laptopRepository.findById(id).isPresent()){
             return ResponseEntity.notFound().build();
@@ -100,7 +100,7 @@ public class LaptopController {
 
     //Borrar todos los laptops
     @DeleteMapping("/api/laptops")
-    @ApiOperation("Borra todos los Laptops")
+    @Operation(summary = "Borra todos los Laptops")
     public ResponseEntity<Laptop>deleteAll(){
         laptopRepository.deleteAll();
         return ResponseEntity.noContent().build();

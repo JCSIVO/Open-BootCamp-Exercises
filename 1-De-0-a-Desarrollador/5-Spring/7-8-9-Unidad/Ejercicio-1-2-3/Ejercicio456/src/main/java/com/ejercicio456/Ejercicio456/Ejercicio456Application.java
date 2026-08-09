@@ -8,9 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 
-import io.swagger.models.Swagger;
-
-
 
 @SpringBootApplication
 public class Ejercicio456Application {
