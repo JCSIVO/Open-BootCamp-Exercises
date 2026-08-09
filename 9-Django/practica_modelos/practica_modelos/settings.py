@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import os
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -20,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-n@e+lp*ixu-1ougjcl%o55qu1b6=rkq@bt8j-vro*z*wtt5xxz'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-GqpYBzAy%YD7X@3xHNVNmnnmBaUV3HE1*q6k2-ay$tUH*H5f7q')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [h for h in os.environ.get('DJANGO_ALLOWED_HOSTS', '').split(',') if h]
 
 
 # Application definition
@@ -79,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'company',
         'USER': 'postgres',
-        'PASSWORD': 'mypassword',
+        'PASSWORD': os.environ.get('DJANGO_DB_PASSWORD', 'change-me'),
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
