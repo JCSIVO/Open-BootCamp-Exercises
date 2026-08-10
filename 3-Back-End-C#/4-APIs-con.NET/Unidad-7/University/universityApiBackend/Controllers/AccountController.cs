@@ -40,7 +40,7 @@ namespace universityApiBackend.Controllers
             },
         };
         [HttpPost]
-        public async IActionResult GetToken(UserLogins userLogin)
+        public async Task<IActionResult> GetToken(UserLogins userLogin)
         {
             try
             {

@@ -75,10 +75,7 @@ namespace universityApiBackend.Controllers
                     return BadRequest("Wrong Password");
                 }
 
-                var myMessage = _sharedResourceLocalizer.GetString("Welcome").Value ?? String.Empty;
-
-
-                var response = new { Token = Token, Message = myMessage };
+                var response = new { Token = Token, Message = "Welcome" };
 
                 return Ok(Token);
             }
